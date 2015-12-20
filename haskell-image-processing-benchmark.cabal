@@ -20,16 +20,19 @@ executable haskell-image-processing-benchmark
                        HaskellImageProcessingBenchmark.Repa,
                        HaskellImageProcessingBenchmark.OpenCV
   -- other-extensions:    
-  build-depends:       base >=4.6 && <4.7,
-                       criterion ==1.0.2.0,
-                       friday ==0.1.5,
-                       unm-hip ==0.3.1.7,
-                       yarr ==1.3.2,
-                       yarr-image-io ==1.3.0,
-                       repa ==3.2.3.3,
-                       repa-devil ==0.3.2.2,
-                       repa-algorithms ==3.2.4.1,
-                       deepseq ==1.3.0.2
+  build-depends:       base == 4.7.*,
+                       criterion == 1.0.2.0,
+                       hip == 1.0.0.0,
+                       friday == 0.2.2.0,
+                       convertible == 1.*,
+                       friday-devil == 0.1.1.1, 
+                       unm-hip == 0.3.1.7,
+                       yarr == 1.3.*,
+                       yarr-image-io == 1.3.2.1,
+                       repa == 3.3.1.*,
+                       repa-devil == 0.3.2.6,
+                       repa-algorithms == 3.3.1.*,
+                       deepseq == 1.3.*
   hs-source-dirs:      src
   default-language:    Haskell2010
   ghc-options:         -rtsopts -with-rtsopts=-N -Odph -rtsopts -threaded -fno-liberate-case -funfolding-use-threshold1000 -funbox-strict-fields -fexpose-all-unfoldings -funfolding-keeness-factor1000 -fsimpl-tick-factor=500 -fllvm -optlo-O3
